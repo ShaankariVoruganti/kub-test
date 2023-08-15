@@ -9,9 +9,9 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('git Checkout') {
             steps {
-                checkout scm
+               git checkout "https://github.com/ShaankariVoruganti/kub-test.git"
             }
         }
      stage('Clear destination') {
