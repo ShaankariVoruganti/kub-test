@@ -22,6 +22,12 @@ pipeline {
                 }
             }
         }
+    stage('Clear Terraform Plugin Cache') {
+       steps {
+        sh 'rm -rf ~/.terraform.d/plugin-cache'
+         }
+       }
+ 
          stage('Terraform validate') {
             steps {
                 script {
