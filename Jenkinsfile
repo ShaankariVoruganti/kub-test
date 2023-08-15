@@ -7,6 +7,7 @@ pipeline{
         sh 'git clone https://github.com/ShaankariVoruganti/kub-test'
       }
     }
+    }
         stage('init'){
       steps{
         sh 'terraform init'
