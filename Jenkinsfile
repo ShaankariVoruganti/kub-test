@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('git Checkout') {
             steps {
-               git checkout "https://github.com/ShaankariVoruganti/kub-test.git"
+               git clone url:"https://github.com/ShaankariVoruganti/kub-test"
             }
         }
      stage('Clear destination') {
