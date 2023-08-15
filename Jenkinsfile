@@ -22,7 +22,20 @@ pipeline {
                 }
             }
         }
-
+         stage('Terraform validate') {
+            steps {
+                script {
+                    sh 'terraform validate'
+                }
+            }
+        }
+         stage('Terraform plan') {
+            steps {
+                script {
+                    sh 'terraform plan'
+                }
+            }
+        }
         stage('Terraform Apply') {
             steps {
                 script {
