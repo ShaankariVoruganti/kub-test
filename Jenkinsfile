@@ -2,11 +2,15 @@ pipeline{
   agent any
   stages{
     stage(‘Checkout’) {
-    stage('git clone'){
+       steps {
+         checkout([$class: ‘GitSCM’, branches: [[name: ‘*/main’]], extensions: [], userRemoteConfigs: [[url: ‘ https://github.com/ShaankariVoruganti/kub-test.git‘]]])
+        }
+       }
+   /* stage('git clone'){
       steps{
         sh 'git clone https://github.com/ShaankariVoruganti/kub-test'
       }
-    }
+    }*/
     }
         stage('init'){
       steps{
