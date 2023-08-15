@@ -14,7 +14,12 @@ pipeline {
                 checkout scm
             }
         }
-
+     stage('Clear destination') {
+       steps {
+        sh 'rm -rf kub-test'
+         }
+       }
+ 
         stage('Terraform Init') {
             steps {
                 script {
