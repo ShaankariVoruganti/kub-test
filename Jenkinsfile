@@ -9,12 +9,12 @@ pipeline {
     }
 
     stages {
-        stage('git Checkout') {
-            steps {
-               git clone "https://github.com/ShaankariVoruganti/kub-test"
-            }
-        }
-     stage('Clear destination') {
+       stage('git clone'){
+      steps{
+        sh 'git clone https://github.com/ShaankariVoruganti/jenkins'
+      }
+    }
+        stage('Clear destination') {
        steps {
         sh 'rm -rf kub-test'
          }
