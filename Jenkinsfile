@@ -11,7 +11,7 @@ pipeline {
     stages {
        stage('git clone'){
       steps{
-        sh 'git clone https://github.com/ShaankariVoruganti/jenkins'
+        sh 'git clone https://github.com/ShaankariVoruganti/kub-test'
       }
     }
         stage('Clear destination') {
